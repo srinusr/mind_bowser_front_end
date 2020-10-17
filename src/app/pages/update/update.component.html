@@ -1,0 +1,30 @@
+<div class="container text-center">
+    <div class="border border-light" style="width: 100%;margin-top:3%;margin-bottom:5px;">
+        <form [formGroup]="updateform" (ngSubmit) = "add()" class="">
+            <div class="logo"></div>
+            <h2 class="mb-4 text-center text-primary">Employee Details</h2>
+                <div class="form-group"> <input type="text" placeholder="First Name"    class="form-control" formControlName="firstName">
+                </div>
+                <div class="form-group"> <input type="text" placeholder="Last Name" class="form-control" formControlName="lastName">
+                </div>
+                <div class="form-group"> <input type="email" placeholder="Email Address" class="form-control" formControlName="email">
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Phone Number" class="form-control" formControlName="phone">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="City" class="form-control" formControlName="city">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Address" class="form-control" formControlName="adress" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Data Of Birth" class="form-control" formControlName="dob">
+                </div>
+                <div class="form-group text-center">
+                    
+                        <button type="submit" class="btn btn-primary ">Update</button>
+                </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import '~ngx-toastr/toastr.css';
+      #toast-container > div {
+        opacity:1;
+    }
+
+
+   
+  .login-box{
+      width: 100%;
+      margin-top:7%;
+      margin-left:30%;
+  }
+  
+  
+  @media (width: 768px) {
+      .login-box{
+          width: 100%;
+          margin-left:0%;
+      }
+     }
+     @media (max-width: 900px) {
+      .login-box{
+          width: 100%;
+          margin-left:0%;
+      }
+     }
