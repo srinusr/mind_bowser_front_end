@@ -31,7 +31,7 @@ registerform:FormGroup;
       "dob":["",Validators.required]
       });
   }
-  get () { return this.registerform.controls; }
+  get f () { return this.registerform.controls; }
 
   register(){
     let postData:any = {};
@@ -50,7 +50,7 @@ registerform:FormGroup;
       this.router.navigate(['/login']);
       
     },error=>{
-      this.toast.success("Error while registering new Manager");
+      this.toast.error("Error while registering new Manager");
       
     })
   }

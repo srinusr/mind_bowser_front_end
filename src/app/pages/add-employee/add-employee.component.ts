@@ -30,10 +30,10 @@ export class AddEmployeeComponent implements OnInit {
       "city":["",Validators.required],
       "adress":["",Validators.required],
       "dob":["",Validators.required],
-      "phone":["",Validators.required]
+      "phone":['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]]
       });
   }
-  get () { return this.employeeform.controls; }
+  get f() { return this.employeeform.controls; }
 
   add(){
     let postData:any = {};

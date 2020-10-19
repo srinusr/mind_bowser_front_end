@@ -4,26 +4,48 @@
             <div class="logo"></div>
             <h2 class="mb-4 text-center text-primary">Add Employee Details</h2>
                 <div class="form-group"> <input type="text" placeholder="First Name" class="form-control" formControlName="fname">
+                    <div *ngIf="f.fname.touched && f.fname.invalid" class="alert alert-danger">
+                         <div >Please, Enter  Firstname.</div>
+                    </div>
                 </div>
                 <div class="form-group"> <input type="text" placeholder="Last Name" class="form-control" formControlName="lname">
+                    <div *ngIf="f.lname.touched && f.lname.invalid" class="alert alert-danger">
+                        <div >Lastname is required.</div>
+                    </div>
                 </div>
                 <div class="form-group"> <input type="email" placeholder="Email Address" class="form-control" formControlName="email">
+                    <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+                        <div>Email is required.</div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="number" placeholder="Phone Number" class="form-control" formControlName="phone">
+                    <div *ngIf="f.phone.touched && f.phone.invalid" class="alert alert-danger">
+                        <div *ngIf="f.phone.errors.required">Mobile Number is required.</div>
+                        <div *ngIf="f.phone.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" placeholder="City" class="form-control" formControlName="city">
+                    <div *ngIf="f.city.touched && f.city.invalid" class="alert alert-danger">
+                        <div >City is required.</div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" placeholder="Address" class="form-control" formControlName="adress">
+                    <div *ngIf="f.adress.touched && f.adress.invalid" class="alert alert-danger">
+                        <div >Address is required.</div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" placeholder="Data Of Birth" class="form-control" formControlName="dob">
+                    <div *ngIf="f.dob.touched && f.dob.invalid" class="alert alert-danger">
+                        <div >Dob is required.</div>
+                    </div>
                 </div>
                 <div class="form-group text-center">
                     
-                        <button type="submit" class="btn btn-primary ">Add Employee</button>
+                        <button type="submit" class="btn btn-primary " [disabled]="!employeeform.valid">Add Employee</button>
                 </div>
         </form>
     </div>
